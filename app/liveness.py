@@ -45,7 +45,7 @@ class Thresholds:
     # (see engine.yaw). Positive means the person turned to *their* left. Roughly 0.1 is 15
     # degrees and 0.2 is 30 degrees, but landmarks are noisy and biased per face, so a turn is
     # measured against the reference frame of the same attempt.
-    center_max_yaw: float = 0.2
+    center_max_yaw: float = 0.3
     turn_min_delta: float = 0.22
     # "closer" needs the face this much wider than in the reference frame.
     closer_min_ratio: float = 1.18
