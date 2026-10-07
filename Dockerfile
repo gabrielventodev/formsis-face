@@ -6,7 +6,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
 COPY models ./models
-RUN sha256sum -c models/SHA256SUMS --quiet && useradd --system --uid 10001 face
+RUN cd models && sha256sum -c SHA256SUMS --quiet && useradd --system --uid 10001 face
 USER face
 EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=3s CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"
