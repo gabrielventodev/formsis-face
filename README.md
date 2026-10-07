@@ -1,6 +1,6 @@
 # formsis-face
 
-Servicio de verificación facial de FormFlow. Por ahora hace **prueba de vida** (liveness): decide si quien está frente a la cámara es una persona real y no una foto impresa, una pantalla o un video. Más adelante sumará la comparación de la selfie con la foto del documento.
+Servicio de verificación facial de Formsis. Por ahora hace **prueba de vida** (liveness): decide si quien está frente a la cámara es una persona real y no una foto impresa, una pantalla o un video. Más adelante sumará la comparación de la selfie con la foto del documento.
 
 - Corre 100% en tu servidor, en CPU, sin llamar a ningún servicio externo.
 - Es **sin estado**: recibe fotogramas, responde números y no guarda nada. Las fotos y el resultado los guarda el backend (formsis-backend).
@@ -67,7 +67,7 @@ pytest -q
 FACE_TOKEN=dev uvicorn app.main:create_app --factory --port 8000
 ```
 
-Con Docker (lo levanta el `docker-compose.yml` de formflow-v2 como servicio `face`):
+Con Docker (lo levanta el `docker-compose.yml` de formsis-v2 como servicio `face`):
 
 ```bash
 docker build -t formsis-face .

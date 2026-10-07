@@ -1,5 +1,5 @@
 """HTTP API of the face service. It is stateless: it receives frames, answers with numbers and
-keeps nothing. Only the FormFlow backend calls it, over the internal Docker network.
+keeps nothing. Only the Formsis backend calls it, over the internal Docker network.
 
 Run with: uvicorn app.main:create_app --factory"""
 
